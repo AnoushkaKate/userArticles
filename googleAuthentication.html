@@ -17,6 +17,10 @@
 
     
     <div id="secretContent">
+
+        <button id="signOutButton">Sign Out</button>
+
+
         <div id="form-container">
             <div class="add-modal modal-wrapper">
                 <div class="modal">
@@ -45,7 +49,7 @@
         
               </div>
         </div>
-        <button id="signOutButton">Sign Out</button>
+
 
     </div>
 
@@ -119,13 +123,8 @@
             if(user) {
                 // Display the sign out button and user information. 
                 signOutButton.style.display = "block";
-                secretContent.style.display = 'block';
-                signInButton.style.display = "block";
-
-                userName.innerHTML = user.displayName;
-                userEmail.innerHTML = user.email;
-
-                userEmailInForm.value = user.email;
+                secretContent.style.display = "block";
+                signInButton.style.display = "none";
 
 
             }else {
